@@ -25,7 +25,7 @@ func TestAccDataSourceFoo(t *testing.T) {
 	})
 }
 
-const testAccDataSourceFoog= `
+const testAccDataSourceFoo= `
 data "foo_data_source" "foo" {
   sample_attribute = "bar"
 }

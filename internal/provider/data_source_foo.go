@@ -12,7 +12,7 @@ func dataSourceFoo() *schema.Resource {
 		// This description is used by the documentation generator and the language server.
 		Description: "Sample data source in the Terraform provider defn.",
 
-		ReadContext: dataSourceFoo,
+		ReadContext: dataSourceFooRead,
 
 		Schema: map[string]*schema.Schema{
 			"sample_attribute": {
