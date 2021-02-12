@@ -12,7 +12,7 @@ description: |-
 ## Example Usage
 
 ```terraform
-provider "scaffolding" {
+provider "defn" {
   # example configuration here
 }
 ```
