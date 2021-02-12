@@ -27,10 +27,12 @@ func New(version string) func() *schema.Provider {
 	return func() *schema.Provider {
 		p := &schema.Provider{
 			DataSourcesMap: map[string]*schema.Resource{
-				"scaffolding_data_source": dataSourceScaffolding(),
+				"foo_data_source": dataSourceFoo(),
+				"bar_data_source": dataSourceBar(),
 			},
 			ResourcesMap: map[string]*schema.Resource{
-				"scaffolding_resource": resourceScaffolding(),
+				"foo_resource": resourceFoo(),
+				"bar_resource": resourceBar(),
 			},
 		}
 
@@ -48,8 +50,8 @@ type apiClient struct {
 
 func configure(version string, p *schema.Provider) func(context.Context, *schema.ResourceData) (interface{}, diag.Diagnostics) {
 	return func(context.Context, *schema.ResourceData) (interface{}, diag.Diagnostics) {
-		// Setup a User-Agent for your API client (replace the provider name for yours):
-		// userAgent := p.UserAgent("terraform-provider-scaffolding", version)
+    // TODO: not sure about this
+		// userAgent := p.UserAgent("terraform-provider-defn", version)
 		// TODO: myClient.UserAgent = userAgent
 
 		return &apiClient{}, nil
