@@ -1,5 +1,9 @@
 default: testacc
 
+all:
+	go generate
+	$(MAKE) testacc
+
 # Run acceptance tests
 .PHONY: testacc
 testacc:

@@ -9,7 +9,13 @@ description: |-
 
 Sample resource in the Terraform provider defn.
 
+## Example Usage
 
+```terraform
+resource "bar_resource" "example" {
+  sample_attribute = "bar"
+}
+```
 
 ## Schema
 
